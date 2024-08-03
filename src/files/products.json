@@ -1,0 +1,99 @@
+[
+  {
+    "id": 2,
+    "name": "Paleta de sombras",
+    "quantity": 5,
+    "price": 70,
+    "title": "Paleta de sombras",
+    "description": "Sombra para los ojos",
+    "code": "S",
+    "status": true,
+    "stock": 36,
+    "category": "MakeUp"
+  },
+  {
+    "id": 4,
+    "name": "Mascara",
+    "quantity": 21,
+    "price": 12,
+    "title": "Rimmel",
+    "description": "Rizador de pestañas",
+    "code": "MR",
+    "status": true,
+    "stock": 8,
+    "category": "MakeUp"
+  },
+  {
+    "id": 5,
+    "name": "Collar",
+    "title": "Zapato de fiesta",
+    "description": "Zapato con brillos",
+    "code": "Zapi",
+    "price": 90,
+    "status": true,
+    "stock": 4,
+    "category": "Shoes"
+  },
+  {
+    "id": 6,
+    "name": "Zapatos en punta",
+    "title": "Zapato de fiesta 2",
+    "description": "Zapato con brillos",
+    "code": "Zapi",
+    "price": 90,
+    "status": true,
+    "stock": 4,
+    "category": "Shoes"
+  },
+  {
+    "id": 7,
+    "title": "Collar brillante",
+    "description": "Collar con diamantes",
+    "code": "74",
+    "price": 500,
+    "status": false,
+    "stock": 3,
+    "category": "Joyeria"
+  },
+  {
+    "id": 8,
+    "title": "fd",
+    "description": "gd",
+    "code": "35",
+    "price": 24,
+    "status": false,
+    "stock": 35,
+    "category": "df"
+  },
+  {
+    "id": 9,
+    "title": "esd",
+    "description": "brillo para labios",
+    "code": "35",
+    "price": 35,
+    "status": false,
+    "stock": 5436,
+    "category": "sfdg"
+  },
+  {
+    "id": 10,
+    "title": "fe",
+    "description": "effr",
+    "code": "524",
+    "price": 354,
+    "status": false,
+    "stock": 354,
+    "category": "fg"
+  },
+  {
+    "id": 11,
+    "name": "Mascarasss",
+    "title": "Rimmel",
+    "description": "Rizador de pestañas",
+    "code": "MR",
+    "price": 12,
+    "status": true,
+    "stock": 8,
+    "category": "MakeUp"
+  }
+]
