@@ -10,10 +10,11 @@ import cartRouter from './routes/cart.router.js';
 import viewsRouter from './routes/views.router.js';
 import sessionsRouter from './routes/sessions.router.js';
 import initializePassportConfig from './config/passport.config.js';
+import config from "./config/config.js";
 
 const app = express();
 
-const PORT = process.env.PORT || 8080;
+const PORT = config.app.PORT;
 
 app.engine('handlebars', handlebars.engine());
 app.set('views', './src/views');
@@ -22,7 +23,7 @@ app.set('view engine', 'handlebars');
 const server = app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 const connectDB = async () => {
   try {
-      await mongoose.connect('mongodb+srv://barbimuro:123@cluster.mcha7rj.mongodb.net/TypesOfProducts?retryWrites=true&w=majority&appName=Cluster');
+      await mongoose.connect(config.mongo.URL);
       console.log('MongoDB connected');
   } catch (error) {
       console.error('Error connecting to MongoDB:', error);

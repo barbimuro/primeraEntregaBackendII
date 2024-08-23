@@ -2,8 +2,10 @@ import passport from "passport";
 import local from 'passport-local';
 import { Strategy as GithubStrategy } from "passport-github2";
 import { ExtractJwt, Strategy as JWTStrategy } from "passport-jwt";
+
 import { usersService } from "../managers/index.js";
 import AuthService from "../services/AuthService.js";
+import config from "./config.js";
 
 const LocalStrategy = local.Strategy;
 
@@ -48,8 +50,8 @@ const initializePassportConfig = () => {
     }));
 
     passport.use('github', new GithubStrategy({
-        clientID: 'Iv23liCm0hIuEL2kqjlR',
-        clientSecret: '8d114d68992c4c3ae25b4cf38d105f6c9a31a28e',
+        clientID: config.auth.github.CLIENT_ID,
+        clientSecret: config.auth.github.CLIENT_SECRET,
         callbackURL: 'http://localhost:8080/api/sessions/githubcallback'
     }, async (token, refreshToken, profile, done) => {
         const userInfo = profile._json;
@@ -73,14 +75,14 @@ const initializePassportConfig = () => {
     }));
 
     passport.use('current', new JWTStrategy({
-        secretOrKey: 'barbiSecreto',
+        secretOrKey: config.auth.jwt.SECRET,
         jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor])
     }, async (payload, done) => {
         return done(null, payload);
     }));
     
     function cookieExtractor(req) {
-        return req?.cookies?.['tokenEspecial'];
+        return req?.cookies?.[config.auth.jwt.COOKIE];
     }
 };
 
